@@ -1,3 +1,4 @@
+.idea
 
 ###> symfony/framework-bundle ###
 /.env.local
@@ -15,6 +16,6 @@
 ###< phpunit/phpunit ###
 
 ###> symfony/phpunit-bridge ###
-.phpunit.result.cache
-/phpunit.xml
+#.phpunit.result.cache  # Already ignored in phpunit/phpunit
+#/phpunit.xml           # Already ignored in phpunit/phpunit
 ###< symfony/phpunit-bridge ###
