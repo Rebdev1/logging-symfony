@@ -23,11 +23,14 @@ class IndexController extends AbstractController
 
     #[Route('/', name: 'app_index')]
     public function index(
-        LoggerInterface $logger
+        LoggerInterface $logger,
+        LoggerInterface $fooLogger,
     ): Response {
         // Default logger has been pass as a parameter of my index method,
         //   so the channel is app
         $logger->info("My awesome controller has been called!");
+
+        $this->fooLogger->error('foo logging!');
 
         // We can use our class properties to which the wiring have been declared in /config/services.yaml
         // And the properties have been instantiated in the __construct method.
